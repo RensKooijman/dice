@@ -1,0 +1,103 @@
+body{
+    background-color: #333333;
+}
+p {
+    display: inline-block;
+    font-size: 32px;
+}
+
+#average {
+    display: inline-block;
+    font-size: 32px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    background-color: rgba(12, 132, 255, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    appearance: none;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+    display: block;
+}
+
+#dice {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    position: relative;
+    margin-bottom: 30px;
+    background-color: rgb(200 ,200 ,200);
+}
+
+.dot {
+    width: 20%;
+    height: 20%;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.dot1 {
+    top: 40%;
+    left: 40%;
+}
+
+.dot2 {
+    top: 20%;
+    left: 20%;
+}
+
+.dot3 {
+    top: 40%;
+    left: 40%;
+}
+
+.dot4 {
+    top: 20%;
+    left: 60%;
+}
+
+.dot5 {
+    top: 40%;
+    left: 40%;
+}
+
+.dot6 {
+    top: 40%;
+    left: 20%;
+}
+
+.dot2+.dot1 {
+    top: 60%;
+    left: 60%;
+}
+
+.dot4+.dot3 {
+    top: 60%;
+    left: 20%;
+}
+
+.dot6+.dot5 {
+    top: 40%;
+    left: 60%;
+}
+
+.hidden {
+    display: none;
+}
