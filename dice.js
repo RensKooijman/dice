@@ -1,5 +1,5 @@
 let allValues = [];
-
+//geeft het random getal en zorgt dat dat aantal in de dice komt 
 function rollDice() {
   const randomNumber = Math.floor(Math.random() * 6) + 1;
   const diceElement = document.getElementById("dice");
@@ -16,26 +16,23 @@ function rollDice() {
     newDiv.classList.add('dot', `dot${i}`);
     diceElement.appendChild(newDiv);
   }
+  //zorgt ervoor dat het aantal keer van getal wat gerold word in lijst komt
+  const counts = {};
+  for (let i = 0; i < allValues.length; i++) {
+    const number = allValues[i];
+    counts[number] = counts[number] ? counts[number] + 1 : 1;
+  }
 
+  for (const number in counts) {
+    const count = counts[number];
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `${number}: ${count}`;
+    list.appendChild(listItem);
+  }
 
-
-
-
-const counts = {};
-for (let i = 0; i < allValues.length; i++) {
-  const number = allValues[i];
-  counts[number] = counts[number] ? counts[number] + 1 : 1;
+  document.body.appendChild(list);
 }
-
-for (const number in counts) {
-  const count = counts[number];
-  const listItem = document.createElement("li");
-  listItem.innerHTML = `${number}: ${count}`;
-  list.appendChild(listItem);
-}
-
-document.body.appendChild(list);
-}
+//berekend het gemmiddelde
 function getAverage(values) {
   if (values.length === 0) {
     return 0;
