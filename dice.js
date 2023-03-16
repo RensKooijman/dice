@@ -22,21 +22,15 @@ function rollDice() {
     const number = allValues[i];
     counts[number] = counts[number] ? counts[number] + 1 : 1;
   }
-
   for (const number in counts) {
     const count = counts[number];
     const listItem = document.createElement("li");
     listItem.innerHTML = `${number}: ${count}`;
     list.appendChild(listItem);
   }
-
   document.body.appendChild(list);
 }
 //berekend het gemmiddelde
 function getAverage(values) {
-  if (values.length === 0) {
-    return 0;
-  }
-  const sum = values.reduce((total, value) => total + value, 0);
-  return sum / values.length;
+  return sum = values.reduce((total, value) => total + value, 0)/values.length;
 }
