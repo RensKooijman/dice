@@ -115,6 +115,6 @@ li {
   }
   
   .rotate {
-    animation: rotate 1s linear infinite;
+    animation: rotate 0.2s linear infinite;
     pointer-events: none;
   }

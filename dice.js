@@ -10,6 +10,7 @@ roll.addEventListener("click", () =>{
 
   setTimeout(function() {
     roll.classList.remove("rotate");
+    roll.style.transform = 'rotateY(360deg) rotateX(45deg) rotateZ(45deg)';
     roll.style.transform = `rotateY(${degrees[randomNumber-1][0]}deg) rotateX(${degrees[randomNumber-1][1]}deg) rotateZ(${degrees[randomNumber-1][2]}deg)`;
 
     console.log(randomNumber);
@@ -29,7 +30,7 @@ roll.addEventListener("click", () =>{
       list.appendChild(listItem);
     }
     document.body.appendChild(list);
-  }, 2500);
+  }, 2000);
 });
 //berekend het gemmiddelde
 function getAverage(values) {
