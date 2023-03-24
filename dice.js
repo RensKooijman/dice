@@ -1,21 +1,17 @@
 let allValues = [];
+let degrees = [[0, 60, -45], [45, -20, 70], [60, 165, 20], [60, 165, 200], [45, -20, 250], [0, 240, -45]];
 //geeft het random getal en zorgt dat dat aantal in de dice komt 
-function rollDice() {
+let roll = document.querySelector(".dice");
+roll.addEventListener("click", () =>{
+  roll.classList.add("rotate");
   const randomNumber = Math.floor(Math.random() * 6) + 1;
-  const diceElement = document.getElementById("dice");
   const average = document.getElementById("average");
   const list = document.getElementById("list");
 
   console.log(randomNumber);
   allValues.push(randomNumber);
   average.innerHTML = getAverage(allValues);
-  diceElement.innerHTML='';
   list.innerHTML='';
-  for (var i = randomNumber; i >= 1; i--) {
-    let newDiv = document.createElement('div');
-    newDiv.classList.add('dot', `dot${i}`);
-    diceElement.appendChild(newDiv);
-  }
   //zorgt ervoor dat het aantal keer van getal wat gerold word in lijst komt
   const counts = {};
   for (let i = 0; i < allValues.length; i++) {
@@ -29,7 +25,11 @@ function rollDice() {
     list.appendChild(listItem);
   }
   document.body.appendChild(list);
-}
+  setTimeout(function() {
+    roll.classList.remove("rotate");
+    roll.style.transform = `rotateY(${degrees[randomNumber-1][0]}deg) rotateX(${degrees[randomNumber-1][1]}deg) rotateZ(${degrees[randomNumber-1][2]}deg)`;
+  }, 2500);
+});
 //berekend het gemmiddelde
 function getAverage(values) {
   return sum = values.reduce((total, value) => total + value, 0)/values.length;

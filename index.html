@@ -5,14 +5,23 @@
     <link rel="stylesheet" href="style.css"></link>
   </head>
   <body>
-    <h1>Random Dice Roll</h1>
-    <p>average nuber is:</p>
-    <div id="average">
+    <div id="leftContent">
+      <h1>Random Dice Roll</h1>
+      <p>average nuber is:</p>
+      <div id="average"></div>
     </div>
-    <button onclick="rollDice()">
-        <div id="dice"></div>
-    </button>
-    <ul id="list"></ul>
+    </div>
+      <div class="dice rotate" style="transition: transform 1s ease;">
+        <div class="side one"></div>
+        <div class="side two"></div>
+        <div class="side three"></div>
+        <div class="side four"></div>
+        <div class="side five"></div>
+        <div class="side six"></div>
+      </div>    
+    <div id="bottom">   
+      <ul id="list"></ul>
+    </div>
     <script src="dice.js"></script>
   </body>
 </html>
