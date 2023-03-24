@@ -84,6 +84,7 @@ li {
 }
 .dice {
     transform-style: preserve-3d;
+
 }
   
 .one {
@@ -115,4 +116,5 @@ li {
   
   .rotate {
     animation: rotate 1s linear infinite;
+    pointer-events: none;
   }
